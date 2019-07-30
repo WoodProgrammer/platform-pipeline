@@ -1,0 +1,23 @@
+{
+    
+  "variables": {
+      "aws_access_key": "",
+      "aws_secret_key": ""
+  },
+    
+  "builders": [{
+      "name": "RedHat Nginx",
+      "type": "amazon-ebs",
+      "region": "eu-central-1",
+      "access_key": "{{user `aws_access_key`}}",
+      "secret_key": "{{user `aws_secret_key`}}",    
+      "instance_type": "t2.micro",
+      "source_ami": "ami-c86c3f23",
+      "force_deregister": "true",
+      "force_delete_snapshot": "true",
+      "ami_name": "TYK MongoDb AuthTest  {{timestamp}}",
+      "ssh_username": "ec2-user"
+  }
+]
+          
+}
