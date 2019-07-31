@@ -1,0 +1,7 @@
+--- 
+phases: 
+  build: 
+    commands: 
+      - "cd $GOPATH/src/terratest/test/s3-bucket && go test -run TestTerraformAwsS3Example "
+      
+version: 0.2
